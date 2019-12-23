@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/musiclist"
+            android:text="歌单"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/localmusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本地音乐" />
+        <Button
+            android:id="@+id/addmusiclist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加歌单" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_above="@+id/controler">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+        <FrameLayout
+            android:id="@+id/content_main"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            ></FrameLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/musicname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="歌曲名称"
+        android:layout_above="@+id/controler"/>
+    <RelativeLayout
+        android:id="@+id/controler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/funcbutton"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+        <SeekBar
+            android:id="@+id/music_seek_bar"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"/>
+        <TextSwitcher
+            android:id="@+id/text_switcher"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/music_seek_bar">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00:00/2:00"
+                android:textColor="@color/colorAccent"/>
+        </TextSwitcher>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:id="@+id/funcbutton"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/playing_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/order" />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/playing_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/pervious" />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/playing_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/start" />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/playing_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/next" />
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</RelativeLayout>
